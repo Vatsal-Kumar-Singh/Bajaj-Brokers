@@ -10,8 +10,8 @@ TRADES_FILE = os.path.join(DATA_DIR, "trades.json")
 PORTFOLIO_FILE = os.path.join(DATA_DIR, "portfolio.json")
 
 instruments = [
-    {"symbol": "TCS", "exchange": "NSE", "IT": "EQ", "lastTradedPrice": 4200},
-    {"symbol": "INFY", "exchange": "NSE", "IT": "EQ", "lastTradedPrice": 6900},
+    {"symbol": "BajajAuto", "exchange": "NSE", "IT": "EQ", "lastTradedPrice": 9761},
+    {"symbol": "BajajCon", "exchange": "NSE", "IT": "EQ", "lastTradedPrice": 282},
 ]
 
 def load(path, default):
@@ -33,3 +33,4 @@ def save_trades():
     save(TRADES_FILE, trades)
 def save_portfolio():
     save(PORTFOLIO_FILE, portfolio)
+
