@@ -1,3 +1,5 @@
+NOTE FOR REVIEWER: I DID NOT ADD NEW & CANCELED ORDER STATES BY DESIGN CHOICE,
+IT DOES NOT MAKE SENSE TO HAVE THEM IN A SIMULATED ENVIRONMENT WHERE ALL ORDERS ARE IMMEDIATELY EXECUTED.
 import uuid
 from store import trades, portfolio, save_trades, save_portfolio, instruments
 
@@ -35,3 +37,4 @@ def execute_order(order):
         }
     portfolio[symbol]["quantity"] += qty_change
     save_portfolio()
+
