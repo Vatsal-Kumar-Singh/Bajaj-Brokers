@@ -5,7 +5,7 @@ trader = Trader()
 print(trader.get_instruments())
 
 order = trader.place(
-    symbol="TCS",
+    symbol="BajajAuto",
     side="BUY",
     order_type="MARKET",
     quantity=10
@@ -13,3 +13,4 @@ order = trader.place(
 print(order)
 
 print(trader.get_portfolio())
+
