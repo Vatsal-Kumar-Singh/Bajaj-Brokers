@@ -10,10 +10,11 @@ def test_get_instruments():
     
 def test_place():
     response = tester.post("/orders/place", json={
-        "symbol": "TCS",
+        "symbol": "BajajAuto",
         "side": "BUY",
         "orderType": "MARKET",
         "quantity": 5
     })
     assert response.status_code == 200
     assert "orderId" in response.json()
+
