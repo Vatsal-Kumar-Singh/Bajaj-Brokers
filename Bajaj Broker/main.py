@@ -30,6 +30,9 @@ def place(order: OrderRequest):
     if order.orderType == "LIMIT":
         if order.price is None or order.price <= 0:
             raise HTTPException(400, "Valid price required for LIMIT order")
+    if order.orderType not in ["MARKET", "LIMIT"]:
+        raise HTTPException(400, "Invalid order type. Use MARKET or LIMIT")
+
     order_id = str(uuid.uuid4())
     new_order = {
         "orderId": order_id,
@@ -70,4 +73,5 @@ def get_portfolio():
             "currentValue": data["quantity"] * avg_price
         })
     return result
+
 
